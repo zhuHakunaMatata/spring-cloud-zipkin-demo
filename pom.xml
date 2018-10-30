@@ -35,16 +35,27 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
-        <dependency>
+		<!-- Zipkin 服务器通过Stream 收集跟踪信息 -->
+		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-zipkin</artifactId>
+			<artifactId>spring-cloud-sleuth-zipkin-stream</artifactId>
+		</dependency>
+		<!-- 使用 Kafka 作为 Stream 服务器 -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-stream-binder-kafka</artifactId>
 		</dependency>
 
+        <!--<dependency>-->
+			<!--<groupId>org.springframework.cloud</groupId>-->
+			<!--<artifactId>spring-cloud-starter-zipkin</artifactId>-->
+		<!--</dependency>-->
+
 		<!-- Zipkin 服务器依赖 -->
-		<dependency>
-			<groupId>io.zipkin.java</groupId>
-			<artifactId>zipkin-server</artifactId>
-		</dependency>
+		<!--<dependency>-->
+			<!--<groupId>io.zipkin.java</groupId>-->
+			<!--<artifactId>zipkin-server</artifactId>-->
+		<!--</dependency>-->
 
 		<!-- Zipkin 服务器UI控制器 -->
 		<dependency>
